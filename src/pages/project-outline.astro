@@ -3,257 +3,255 @@
 ---
 
 <div id="container">
-	<main>
-		<section id="hero">
-			<h1>Cadalus</h1>
-		</section>
-		<section id="mission">
-			<h2>Mission</h2>
-			<p>
-				Cadalus is a project to free the <dfn id="AEC"
-					>architecture, engineering and construction</dfn
-				> (<abbr title="architecture, engineering and construction"
-					>AEC</abbr
-				>) industry from the constraints of proprietary software.
-			</p>
-			<p>
-				Over the past 40 years, the <abbr
-					title="architecture, engineering and construction">AEC</abbr
-				> industry has been dominated by a few proprietary software vendors,
-				which has led to a lack of innovation and user experience stagnation.
-				The main developments in the industry has been new and exciting monetization
-				strategies, from overpriced updates to overpriced subscriptions,
-				to finally overpriced and hard-to-calculate token-based pricing.
-			</p>
-			<p>
-				Cadalus is to provide a European, free and independent
-				alternative to proprietary CAD, BIM and Archiviz software which
-				nevertheless remains interoperable with existing workflows.
-			</p>
-		</section>
-		<section id="goals">
-			<h2>Goals</h2>
-			<p>
-				Replacing an entire tech stack is best done incrementally, step
-				by step. Each step individually is designed to provide value to
-				the <abbr title="architecture, engineering and construction"
-					>AEC</abbr
-				> community.
-			</p>
-			<h3>Stage 1: Quick sketches and floorplans</h3>
-			<p>
-				Being able to quickly generate sketches and floorplans is the
-				core feature.
-			</p>
-			<p>
-				Plans should be easy and fast to create, with the program
-				intelligently layouting the document to create a high-quality
-				output which can be used by builders without further tweaking.
-			</p>
-			<h3>Stage 2: Sketch to 3D geometry</h3>
-			<p>
-				CAD sketches by definition contain all measurements necessary to
-				construct a 3D environment. This process should happen
-				automatically (perhaps: in the background), to create a fast
-				check with a three-dimensional reality and quickly spot
-				impossibilities.
-			</p>
-			<h3>Stage 3: Geometry to visualizations</h3>
-			<p>
-				Once 3D geometry exists, the European open source program <a
-					href="https://blender.org">Blender</a
-				> can take over and do PBR materials, lighting, animation and rendering.
-				Blender has been doing massive strides recently, and outperforms
-				many commercial applications already. Cadalus would provide a method
-				to integrate with Blender to create high-quality visualizations of
-				the 3D geometry.
-			</p>
-			<h3>Stage 4: A fully-fledged BIM</h3>
-			<p>
-				Going from a CAD to a BIM certainly is a longer process, but
-				ultimately only a problem of data input and features which
-				perform calculations based on that data. That is to say, it's
-				all in the realm of possibility.
-			</p>
-			<p>
-				What features would need to be implemented with what priority
-				would be up to the <abbr
-					title="architecture, engineering and construction">AEC</abbr
-				> community.
-			</p>
-			<h3>Stage 5: Continuous development and maintenance</h3>
-			<p>
-				Once the initial stages are done, the project enters the fairly
-				unexciting stage of just maintaining a good tool. This means
-				supporting additional use cases, fixing bugs, ensuring
-				compatibility with new hardware and software, and ensuring that
-				the software remains usable and useful for the <abbr
-					title="architecture, engineering and construction">AEC</abbr
-				> community.
-			</p>
-		</section>
-		<section id="realization">
-			<h2>Realization</h2>
-			<p>
-				Cadalus requires comparatively few resources to get started. The
-				equivalent of 8 seat licenses of the Autodesk <abbr
-					title="architecture, engineering and construction">AEC</abbr
-				> Collection would be enough to hire a developer full-time, and a
-				relatively small team of 5-10 people would be enough to quickly deliver
-				meaningful results.
-			</p>
-			<h3>Technical realization</h3>
-			<p>
-				On a technical level, Cadalus will most likely be a Blender
-				extension. Doing so has various advantages:
-			</p>
-			<ul>
-				<li>
-					Blender will be part of the chain anyway – at latest in the
-					visualization stage.
-				</li>
-				<li>
-					It's widely known that Blender is a powerful 3D editor,
-					though maybe lesser known that it's a powerful 2D drawing
-					and vector graphics editor as well, with its grease pencil
-					and curve editor.
-				</li>
-				<li>
-					Being a Blender extension means that a lot of the difficult
-					technical work – UI system, data model, data management,
-					etc. – is already done, and can be used by Cadalus. This
-					massively cuts back on development time.
-				</li>
-			</ul>
-			<h3>Organizational realization</h3>
-			<p>
-				A European Co-op (SCE) likely would be the best approach here.
-				Individuals and architecture firms would join the coop, and both
-				finance the operations of the development, and oversee the
-				direction of the development. Details may be found in [the articles of association](/articles of association).
-			</p>
-			<p>
-				For example, a full membership might be 460€/month (the price of
-				a single Autodesk <abbr
-					title="architecture, engineering and construction">AEC</abbr
-				> Collection license), with supporting memberships below that level
-				being available. Members with a full membership get to vote on what
-				features get implemented next, to ensure that the development is
-				in line with their very real needs. Supporting members may leave
-				suggestions, but won't have the ability to directly influence development.
-			</p>
-			<p>
-				With this model, the co-op would be sustainable reasonably
-				quickly. If the members feel this price is too high, they might
-				vote to lower the membership fee. Likewise, if they feel more
-				development is needed, they might vote to increase membership
-				fees, or figure out other means to invest into the co-op – or
-				charge non-members for access to the software.
-			</p>
-			<p>
-				Unlike a normal corporation, this model also avoids a
-				misalignment of interests: A VC-funded corporation would enjoy a
-				period of hypergrowth where they de-throne the encumbents, but
-				very quickly pivot to being comparable to the encumbents, with
-				incredible pricing and draconian terms, to make up the 1000x ROI
-				the investors so desperately seek. A co-op, funded by members
-				which are also its customers, cannot experience this
-				misalignment.
-			</p>
-		</section>
-		<section id="FAQ">
-			<h2>FAQ</h2>
-			<p>or rather, miscellanious problems and solutions.</p>
-			<p>
-				<strong>How to ensure adoption of Cadalus?</strong> The industry
-				is caught in a chicken-and-egg problem at the moment: Everyone uses
-				AutoCAD and Revit, therefore universities teach AutoCAD and Revit,
-				therefore everyone learns AutoCAD and Revit, therefore everyone uses
-				AutoCAD and Revit. To break this cycle, Cadalus needs to have explicit
-				support from the industry, so universities can confidently start
-				taching Cadalus. By using a co-op model, the industry is involved
-				from the start.
-			</p>
-			<p>
-				<strong>Should Cadalus be free?</strong> Ideally, yes. Charging for
-				the software creates an unnecessary barrier in an already fairly
-				gatekept industry. Given the strong professionalization of the user
-				base, there's a strong sales argument to pay for high-priority bugfixes
-				and support (becoming a member), to avoid a day of lost work or downtime.
-				If Hans-Peter can now lay out his living room slightly better, or
-				Dmitry from Unregulatistan now is able to design a building which
-				won't fall over – that's great, but also not the sort of audience
-				which would have paid for such a software to begin with.
-			</p>
-			<p>
-				<strong>Should Cadalus be open source?</strong> As a Blender extension,
-				it is required to be. However, even if it wasn't, there is a good
-				reason to go open source: To avoid the risk of vendor lock-in, to
-				encourage interoperability, and to avoid the risk of mismanagement
-				ruining the software forever – you can always fork.
-			</p>
-			<p>
-				<strong
-					>Are there regulations, Norms, Lobbying, which requires
-					proprietary solutions?</strong
-				> Maybe. But for once, the lobby is on our side: There are very few
-				creators of proprietary CADs and BIMs, but <em>a lot</em> of <abbr
-					>AEC</abbr
-				> businesses responsible for unimportant things like <em
-					>our entire built environment</em
-				>. Whatever regulations in place surely can be adapted to allow
-				for something like Cadalus to exist.
-			</p>
-			<p><strong>Is there a financial reason to become a Cadalus member?</strong> 
-				At its current rate of 460€/month, across a 40 year carreer, the average 
-				architect can expect to pay 220k € to Autodesk. Given there no doubt will be price 
-				hikes throughout, this number can be expected to grow well beyond a 
-				quarter million euros, per architect. Cadalus meanwhile would be more like an investment: 
-				Once the software is mature, you may choose to drop out of the co-op, and keep using the software – for free. 
-				In the long run, this will save you a lot more money.</p>
-		</section>
-		<section id="about">
-			<h2>About</h2>
-			<p>
-				The Cadalus project has been initiated by <a
-					href="https://leo.wattenberg.dk">Leo Wattenberg</a
-				>, who previously worked on the <a
-					href="https://audacityteam.org">Audacity</a
-				> audio editor for 4 years. The task of his there was similar to
-				what he envisions for Cadalus: creating a free and open source alternative
-				to proprietary software which is easy to use, reliable and eventually
-				to surpass proprietary software in terms of features and user experience.
-			</p>
-			<p>
-				If created, Cadalus would likely be licensed <a
-					href="https://www.gnu.org/licenses/gpl-3.0.en.html">GPLv3</a
-				>.
-			</p>
-		</section>
-		<section id="join">
-			<h2>Join Cadalus</h2>
-			<p>As of right now, you're the first. Please send me a mail to get this thing off the ground!</p>
-		</section>
-		<section id="contact">
-			<h2>Contact</h2>
-			<p>
-				If you want to get in touch, you can do so via <a
-					href="mailto:cadalus@leoxd.dk">email</a
-				>. 
-			</p>
-			<p class="small"><a href="https://kw.media/impressum/">Impressum</a></p>
-		</section>
-	</main>
+  <main>
+    <section id="hero">
+      <h1>Cadalus</h1>
+    </section>
+    <section id="mission">
+      <h2>Mission</h2>
+      <p>
+        Cadalus is a project to free the <dfn id="AEC"
+          >architecture, engineering and construction</dfn
+        > (<abbr title="architecture, engineering and construction">AEC</abbr>)
+        industry from the constraints of proprietary software.
+      </p>
+      <p>
+        Over the past 40 years, the <abbr
+          title="architecture, engineering and construction">AEC</abbr
+        > industry has been dominated by a few proprietary software vendors, which
+        has led to a lack of innovation and user experience stagnation. The main
+        developments in the industry has been new and exciting monetization strategies,
+        from overpriced updates to overpriced subscriptions, to finally overpriced
+        and hard-to-calculate token-based pricing.
+      </p>
+      <p>
+        Cadalus is to provide a European, free and independent alternative to
+        proprietary CAD, BIM and Archiviz software which nevertheless remains
+        interoperable with existing workflows.
+      </p>
+    </section>
+    <section id="goals">
+      <h2>Goals</h2>
+      <p>
+        Replacing an entire tech stack is best done incrementally, step by step.
+        Each step individually is designed to provide value to the <abbr
+          title="architecture, engineering and construction">AEC</abbr
+        > community.
+      </p>
+      <h3>Stage 1: Quick sketches and floorplans</h3>
+      <p>
+        Being able to quickly generate sketches and floorplans is the core
+        feature.
+      </p>
+      <p>
+        Plans should be easy and fast to create, with the program intelligently
+        layouting the document to create a high-quality output which can be used
+        by builders without further tweaking.
+      </p>
+      <h3>Stage 2: Sketch to 3D geometry</h3>
+      <p>
+        CAD sketches by definition contain all measurements necessary to
+        construct a 3D environment. This process should happen automatically
+        (perhaps: in the background), to create a fast check with a
+        three-dimensional reality and quickly spot impossibilities.
+      </p>
+      <h3>Stage 3: Geometry to visualizations</h3>
+      <p>
+        Once 3D geometry exists, the European open source program <a
+          href="https://blender.org">Blender</a
+        > can take over and do PBR materials, lighting, animation and rendering.
+        Blender has been doing massive strides recently, and outperforms many commercial
+        applications already. Cadalus would provide a method to integrate with Blender
+        to create high-quality visualizations of the 3D geometry.
+      </p>
+      <h3>Stage 4: A fully-fledged BIM</h3>
+      <p>
+        Going from a CAD to a BIM certainly is a longer process, but ultimately
+        only a problem of data input and features which perform calculations
+        based on that data. That is to say, it's all in the realm of
+        possibility.
+      </p>
+      <p>
+        What features would need to be implemented with what priority would be
+        up to the <abbr title="architecture, engineering and construction"
+          >AEC</abbr
+        > community.
+      </p>
+      <h3>Stage 5: Continuous development and maintenance</h3>
+      <p>
+        Once the initial stages are done, the project enters the fairly
+        unexciting stage of just maintaining a good tool. This means supporting
+        additional use cases, fixing bugs, ensuring compatibility with new
+        hardware and software, and ensuring that the software remains usable and
+        useful for the <abbr title="architecture, engineering and construction"
+          >AEC</abbr
+        > community.
+      </p>
+    </section>
+    <section id="realization">
+      <h2>Realization</h2>
+      <p>
+        Cadalus requires comparatively few resources to get started. The
+        equivalent of 8 seat licenses of the Autodesk <abbr
+          title="architecture, engineering and construction">AEC</abbr
+        > Collection would be enough to hire a developer full-time, and a relatively
+        small team of 5-10 people would be enough to quickly deliver meaningful results.
+      </p>
+      <h3>Technical realization</h3>
+      <p>
+        On a technical level, Cadalus will most likely be a Blender extension.
+        Doing so has various advantages:
+      </p>
+      <ul>
+        <li>
+          Blender will be part of the chain anyway – at latest in the
+          visualization stage.
+        </li>
+        <li>
+          It's widely known that Blender is a powerful 3D editor, though maybe
+          lesser known that it's a powerful 2D drawing and vector graphics
+          editor as well, with its grease pencil and curve editor.
+        </li>
+        <li>
+          Being a Blender extension means that a lot of the difficult technical
+          work – UI system, data model, data management, etc. – is already done,
+          and can be used by Cadalus. This massively cuts back on development
+          time.
+        </li>
+      </ul>
+      <h3>Organizational realization</h3>
+      <p>
+        A European Co-op (SCE) likely would be the best approach here.
+        Individuals and architecture firms would join the coop, and both finance
+        the operations of the development, and oversee the direction of the
+        development. Details may be found in <a href="/articles of association"
+          >the articles of association</a
+        >.
+      </p>
+      <p>
+        For example, a full membership might be 460€/month (the price of a
+        single Autodesk <abbr title="architecture, engineering and construction"
+          >AEC</abbr
+        > Collection license), with supporting memberships below that level being
+        available. Members with a full membership get to vote on what features get
+        implemented next, to ensure that the development is in line with their very
+        real needs. Supporting members may leave suggestions, but won't have the
+        ability to directly influence development.
+      </p>
+      <p>
+        With this model, the co-op would be sustainable reasonably quickly. If
+        the members feel this price is too high, they might vote to lower the
+        membership fee. Likewise, if they feel more development is needed, they
+        might vote to increase membership fees, or figure out other means to
+        invest into the co-op – or charge non-members for access to the
+        software.
+      </p>
+      <p>
+        Unlike a normal corporation, this model also avoids a misalignment of
+        interests: A VC-funded corporation would enjoy a period of hypergrowth
+        where they de-throne the encumbents, but very quickly pivot to being
+        comparable to the encumbents, with incredible pricing and draconian
+        terms, to make up the 1000x ROI the investors so desperately seek. A
+        co-op, funded by members which are also its customers, cannot experience
+        this misalignment.
+      </p>
+    </section>
+    <section id="FAQ">
+      <h2>FAQ</h2>
+      <p>or rather, miscellanious problems and solutions.</p>
+      <p>
+        <strong>How to ensure adoption of Cadalus?</strong> The industry is caught
+        in a chicken-and-egg problem at the moment: Everyone uses AutoCAD and Revit,
+        therefore universities teach AutoCAD and Revit, therefore everyone learns
+        AutoCAD and Revit, therefore everyone uses AutoCAD and Revit. To break this
+        cycle, Cadalus needs to have explicit support from the industry, so universities
+        can confidently start taching Cadalus. By using a co-op model, the industry
+        is involved from the start.
+      </p>
+      <p>
+        <strong>Should Cadalus be free?</strong> Ideally, yes. Charging for the software
+        creates an unnecessary barrier in an already fairly gatekept industry. Given
+        the strong professionalization of the user base, there's a strong sales argument
+        to pay for high-priority bugfixes and support (becoming a member), to avoid
+        a day of lost work or downtime. If Hans-Peter can now lay out his living
+        room slightly better, or Dmitry from Unregulatistan now is able to design
+        a building which won't fall over – that's great, but also not the sort of
+        audience which would have paid for such a software to begin with.
+      </p>
+      <p>
+        <strong>Should Cadalus be open source?</strong> As a Blender extension, it
+        is required to be. However, even if it wasn't, there is a good reason to
+        go open source: To avoid the risk of vendor lock-in, to encourage interoperability,
+        and to avoid the risk of mismanagement ruining the software forever – you
+        can always fork.
+      </p>
+      <p>
+        <strong
+          >Are there regulations, Norms, Lobbying, which requires proprietary
+          solutions?</strong
+        > Maybe. But for once, the lobby is on our side: There are very few creators
+        of proprietary CADs and BIMs, but <em>a lot</em> of <abbr>AEC</abbr> businesses
+        responsible for unimportant things like <em
+          >our entire built environment</em
+        >. Whatever regulations in place surely can be adapted to allow for
+        something like Cadalus to exist.
+      </p>
+      <p>
+        <strong>Is there a financial reason to become a Cadalus member?</strong>
+        At its current rate of 460€/month, across a 40 year carreer, the average
+        architect can expect to pay 220k € to Autodesk. Given there no doubt will
+        be price hikes throughout, this number can be expected to grow well beyond
+        a quarter million euros, per architect. Cadalus meanwhile would be more like
+        an investment: Once the software is mature, you may choose to drop out of
+        the co-op, and keep using the software – for free. In the long run, this
+        will save you a lot more money.
+      </p>
+    </section>
+    <section id="about">
+      <h2>About</h2>
+      <p>
+        The Cadalus project has been initiated by <a
+          href="https://leo.wattenberg.dk">Leo Wattenberg</a
+        >, who previously worked on the <a href="https://audacityteam.org"
+          >Audacity</a
+        > audio editor for 4 years. The task of his there was similar to what he
+        envisions for Cadalus: creating a free and open source alternative to proprietary
+        software which is easy to use, reliable and eventually to surpass proprietary
+        software in terms of features and user experience.
+      </p>
+      <p>
+        If created, Cadalus would likely be licensed <a
+          href="https://www.gnu.org/licenses/gpl-3.0.en.html">GPLv3</a
+        >.
+      </p>
+    </section>
+    <section id="join">
+      <h2>Join Cadalus</h2>
+      <p>
+        As of right now, you're the first. Please send me a mail to get this
+        thing off the ground!
+      </p>
+    </section>
+    <section id="contact">
+      <h2>Contact</h2>
+      <p>
+        If you want to get in touch, you can do so via <a
+          href="mailto:cadalus@leoxd.dk">email</a
+        >.
+      </p>
+      <p class="small"><a href="https://kw.media/impressum/">Impressum</a></p>
+    </section>
+  </main>
 </div>
 
 <style>
-	main {
-		max-width: 800px;
-		margin: 0 auto;
-		padding: 1rem;
-	}
+  main {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 1rem;
+  }
 
-	.small {
-		font-size: smaller;
-	}
+  .small {
+    font-size: smaller;
+  }
 </style>
