@@ -1,0 +1,141 @@
+---
+const steps = [
+    {
+        title: "Preliminary work",
+        description: "Before any development can start, a lot of preliminary work needs to be done. This includes research into the problem space, interviews with architects, engineers and builders, and extensive planning. It also includes incorporation, and sorting of financing. This stage is already underway and is yielding documents like a finance plan for this and the following stages, SWOT analyses, and a draft for the articles of association. This work is currently being done by Leo Wattenberg, the initiator of the project."
+    },
+    {
+        title: "Quick sketches and floorplans",
+        description: "Being able to quickly generate sketches and floorplans is the core feature. Plans should be easy and fast to create, with the program intelligently layouting the document to create a high-quality output which can be used by builders without further tweaking. Additionally, the output of this program should be interoperable with existing software, so that using Cadalus at this stage remains useful in production. This stage would require two people to work on Cadalus."
+    },
+    {
+        title: "Sketch to 3D geometry",
+        description: "CAD sketches by definition contain all measurements necessary to construct a 3D environment. This process should happen automatically (perhaps: in the background), to create a fast check with a three-dimensional reality and quickly spot impossibilities. Given that this work is now 'real CAD' work, a full team is required here: Product owner, designer, 3x developers and a QA."
+    },
+    {
+        title: "Geometry to visualizations",
+        description: "Once 3D geometry exists, the European open source program Blender can take over and do PBR materials, lighting, animation and rendering. Blender has been doing massive strides recently, and outperforms many commercial applications already. Cadalus would provide a method to integrate with Blender to create high-quality visualizations of the 3D geometry. The work on Cadalus at this stage would include improving the CAD workflows, and providing meaningful base assets for visualizations. The aforementioned 6-people team would be sufficient to get this stage done, though given the parallelization of some of this work, a larger team of up to 15 people may be appropriate (depending on funding)."
+    },
+    {
+        title: "A fully-fledged BIM",
+        description: "Going from a CAD to a BIM certainly is a longer process, but ultimately only a problem of data input and features which perform calculations based on that data. That is to say, it's all in the realm of possibility. What features would need to be implemented with what priority would be up to the AEC community. The team size here would grow appropriately with the people, though likely will remain comparatively lean as building new features tends to be easier than maintaining ancient, crusty code found in other CAD software."
+    },
+    {
+        title: "Continuous development",
+        description: "Once the initial stages are done, the project enters the fairly unexciting stage of just maintaining a good tool. This means supporting additional use cases, fixing bugs, ensuring compatibility with new hardware and software, and ensuring that the software remains usable and useful for the AEC community."
+    }
+];
+---
+
+<div class="roadmap">
+    <h2 class="roadmap-title">Roadmap</h2>
+    <div class="roadmap-container">
+        {steps.map((step, index) => (
+            <div class="roadmap-step">
+                <div class="step-number">{index}</div>
+                <div class="step-content">
+                    <h3>{step.title}</h3>
+                    <p>{step.description}</p>
+                </div>
+            </div>
+        ))}
+    </div>
+</div>
+
+<style>
+    .roadmap {
+        padding: 2rem;
+        margin: 2rem 0;
+    }
+
+    .roadmap-title {
+        color: #ffffff;
+        font-size: 2rem;
+        margin: 0 0 2rem;
+        text-align: center;
+    }
+
+    .roadmap-container {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        max-width: 800px;
+        margin: 0 auto;
+        position: relative;
+    }
+
+    .roadmap-container::before {
+        content: '';
+        position: absolute;
+        left: 31px;
+        top: 40px;
+        width: 2px;
+        height: calc(100% - 80px);
+        background: #fff;
+    }
+
+    .roadmap-step {
+        background: rgba(255, 255, 255, 0.05);
+        border-radius: 8px;
+        padding: 2rem 0 2rem 5rem;
+        position: relative;
+        transition: transform 0.3s ease;
+    }
+
+    .step-number {
+        background: #007bff;
+        color: white;
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: bold;
+        position: absolute;
+        left: 1rem;
+        top: 1.5rem;
+        z-index: 1;
+        border: 2px solid rgba(255, 255, 255, 0.2);
+        box-shadow: 0 0 0 4px rgba(0, 123, 255, 0.1);
+    }
+
+    .step-content h3 {
+        margin: 0 0 0.5rem 0;
+        color: #ffffff;
+        font-size: 1.25rem;
+    }
+
+    .step-content p {
+        margin: 0;
+        color: #cccccc;
+        font-size: 1rem;
+        line-height: 1.6;
+        white-space: pre-wrap;
+        max-width: 65ch;
+    }
+
+    .roadmap-step {
+        margin-bottom: 1rem;
+    }
+
+    @media (max-width: 768px) {
+        .roadmap {
+            padding: 1rem;
+        }
+        
+        .roadmap-step {
+            padding: 1.25rem 1.25rem 1.25rem 3.5rem;
+        }
+
+        .step-number {
+            left: 0.75rem;
+            top: 1.25rem;
+        }
+
+        .step-content p {
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+    }
+</style>

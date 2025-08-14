@@ -57,26 +57,7 @@ const features = [
     grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
     padding: 2rem;
-    background-color: #1c4b82;
-    background-image: 
-      linear-gradient(rgba(255, 255, 255, 0.1) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(255, 255, 255, 0.1) 1px, transparent 1px),
-      linear-gradient(rgba(255, 255, 255, 0.05) 0.5px, transparent 0.5px),
-      linear-gradient(90deg, rgba(255, 255, 255, 0.05) 0.5px, transparent 0.5px);
-    background-size: 50px 50px, 50px 50px, 10px 10px, 10px 10px;
-    background-position: -1px -1px, -1px -1px, -1px -1px, -1px -1px;
     position: relative;
-  }
-
-  .features-grid::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: radial-gradient(circle at center, transparent 0%, rgba(28, 75, 130, 0.4) 100%);
-    pointer-events: none;
   }
 
   .feature-card {
