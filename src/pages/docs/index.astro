@@ -13,24 +13,67 @@ const sortedDocs = docs
 ---
 
 <Layout title="Documentation Overview">
-  <main class="max-w-4xl mx-auto px-4 py-8">
-    <h1 class="text-4xl font-bold mb-8">Documents</h1>
+  <main>
+    <h1>Documents</h1>
     
-    <div class="grid gap-4">
+    <div class="docs-grid">
       {sortedDocs.map((doc) => {
         const title = doc.frontmatter?.title || doc.url.split('/').pop()?.replace(/\.(md|astro)$/, '');
         const description = doc.frontmatter?.description || '';
         
         return (
-          <a 
-            href={doc.url} 
-            class="block p-6 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow"
-          >
-            <h2 class="text-2xl font-semibold mb-2">{title}</h2>
-            {description && <p class="text-gray-600">{description}</p>}
+          <a href={doc.url} class="doc-card">
+            <h2>{title}</h2>
+            {description && <p class="description">{description}</p>}
           </a>
         );
       })}
     </div>
   </main>
 </Layout>
+
+<style>
+  main {
+    max-width: 64rem;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 2rem;
+  }
+
+  .docs-grid {
+    display: grid;
+    gap: 1rem;
+  }
+
+  .doc-card {
+    display: block;
+    padding: 1.5rem;
+    background-color: white;
+    border-radius: 0.5rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-decoration: none;
+    transition: box-shadow 0.3s ease;
+    position: relative;
+    z-index: 2;
+  }
+
+  .doc-card:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  }
+
+  .doc-card h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: inherit;
+  }
+
+  .doc-card .description {
+    color: #666;
+  }
+</style>
