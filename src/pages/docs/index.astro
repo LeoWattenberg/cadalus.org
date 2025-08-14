@@ -1,18 +1,36 @@
 ---
 import Layout from '../../layouts/Layout.astro';
 
-const docs = await Astro.glob('./*.{md,astro}');
+interface AstroInstance {
+  url: string;
+  frontmatter?: {
+    title?: string;
+    [key: string]: any;
+  };
+  default?: any;
+  rawContent?(): string;
+  compiledContent?(): string;
+}
+
+const docs: AstroInstance[] = Object.values(
+  import.meta.glob<AstroInstance>('./*.{md,astro}', { eager: true })
+);
+
 const sortedDocs = docs
-  .filter(doc => doc.url !== '/docs/') // Exclude the current page
+  .filter(doc => doc.url !== '/docs/')
   .sort((a, b) => {
-    // Sort by frontmatter title if available, otherwise use filename
-    const titleA = a.frontmatter?.title || a.url.split('/').pop()?.replace(/\.(md|astro)$/, '');
-    const titleB = b.frontmatter?.title || b.url.split('/').pop()?.replace(/\.(md|astro)$/, '');
+    const titleA = a.frontmatter?.title
+      ?? a.url.split('/').pop()?.replace(/\.(md|astro)$/, '')
+      ?? '';
+    const titleB = b.frontmatter?.title
+      ?? b.url.split('/').pop()?.replace(/\.(md|astro)$/, '')
+      ?? '';
     return titleA.localeCompare(titleB);
   });
 
-  const title = "Documents Overview";
+const title = 'Documents Overview';
 ---
+
 
 <Layout title={title}>
   <main>
