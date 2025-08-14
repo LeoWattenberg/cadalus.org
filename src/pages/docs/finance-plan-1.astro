@@ -1,0 +1,75 @@
+---
+import TableComponent from "../../components/Table.astro";
+import Layout from "../../layouts/Layout.astro";
+
+const oneTimeExpenses = {
+  title: "One-time expenses",
+  headers: ["Item", "Cost (€)"],
+  rows: [],
+};
+
+const recurringExpenses = {
+  title: "Recurring expenses",
+  headers: ["Item", "Cost (€)"],
+  rows: [
+    ["Personnel – Product owner", 60000],
+    ["Developer lead", 54000],
+    ["cadalus.org domain", 20],
+    ["Figma", 384],
+    ["Groupware (Email server)", 132],
+    ["Total/year", 114536],
+  ],
+};
+
+const recurringIncome = {
+  title: "Recurring income",
+  headers: ["Item", "Amount (€)"],
+  rows: [
+    ["25 Full members @ 500€/month", 138000],
+    ["25 supporting members @ 50€", 15000],
+    ["Total/year", 153000],
+  ],
+};
+
+const summary = {
+  title: "Summary",
+  headers: ["Metric", "Amount (€)"],
+  rows: [
+    ["Total cost (first year)", 114536],
+    ["Total balance (first year)", 38464],
+  ],
+};
+
+export const frontmatter = {
+  title: "Cadalus Financial Plan - Stage 1",
+  description: "Following the preparation step 0, this is where the actual work starts: Initial prototypes, design sprints with the AEC community. It's here where the 2D floorplan editor gets created, knowing it'll be the foundation for features to come.",
+};
+---
+
+<Layout title={frontmatter.title} description={frontmatter.description}>
+  <main>
+    <h1>{frontmatter.title}</h1>
+
+    <TableComponent {...summary} />
+    <TableComponent {...oneTimeExpenses} />
+    <TableComponent {...recurringExpenses} />
+    <TableComponent {...recurringIncome} />
+  </main>
+</Layout>
+
+<style>
+  main {
+    max-width: 64rem;
+    margin: 4em auto;
+    padding: 2rem 1rem;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 3;
+  }
+
+  h1 {
+    margin-bottom: 1.5rem;
+  }
+</style>
