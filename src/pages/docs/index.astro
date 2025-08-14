@@ -5,6 +5,7 @@ interface AstroInstance {
   url: string;
   frontmatter?: {
     title?: string;
+    description?: string;
     [key: string]: any;
   };
   default?: any;
@@ -29,18 +30,18 @@ const sortedDocs = docs
   });
 
 const title = 'Documents Overview';
+const description = 'Browse our collection of documents and resources.';
 ---
 
-
-<Layout title={title}>
+<Layout title={title} description={description}>
   <main>
     <h1>{title}</h1>
-    
+
     <div class="docs-grid">
       {sortedDocs.map((doc) => {
         const title = doc.frontmatter?.title || doc.url.split('/').pop()?.replace(/\.(md|astro)$/, '');
         const description = doc.frontmatter?.description || '';
-        
+
         return (
           <a href={doc.url} class="doc-card">
             <h2>{title}</h2>

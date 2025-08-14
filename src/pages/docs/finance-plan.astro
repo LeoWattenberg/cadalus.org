@@ -43,13 +43,16 @@ const summary = {
   ],
 };
 
-const title = "Cadalus Financial Plan - Stage 0";
-const description = "Financial plan for the first stage of Cadalus, including one-time and recurring expenses, and income projections.";
+export const frontmatter ={
+    title: "Cadalus Financial Plan - Stage 0",
+    description: "Financial plan for the first stage of Cadalus, including one-time and recurring expenses, and income projections."
+}
+
 ---
 
-<Layout title={title} description={description}>
+<Layout title={frontmatter.title} description={frontmatter.description}>
   <main>
-    <h1>{title}</h1>
+    <h1>{frontmatter.title}</h1>
 
     <TableComponent {...summary} />
     <TableComponent {...oneTimeExpenses} />
