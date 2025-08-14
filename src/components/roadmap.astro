@@ -64,22 +64,12 @@ const steps = [
         position: relative;
     }
 
-    .roadmap-container::before {
-        content: '';
-        position: absolute;
-        left: 31px;
-        top: 40px;
-        width: 2px;
-        height: calc(100% - 80px);
-        background: #fff;
-    }
-
     .roadmap-step {
-        background: rgba(255, 255, 255, 0.05);
+        background: #14365e;
         border-radius: 8px;
         padding: 2rem 0 2rem 5rem;
         position: relative;
-        transition: transform 0.3s ease;
+        pointer-events: none;
     }
 
     .step-number {
@@ -87,17 +77,15 @@ const steps = [
         color: white;
         width: 32px;
         height: 32px;
-        border-radius: 50%;
+        border-radius: 50000px;
         display: flex;
         align-items: center;
         justify-content: center;
         font-weight: bold;
         position: absolute;
-        left: 1rem;
-        top: 1.5rem;
-        z-index: 1;
-        border: 2px solid rgba(255, 255, 255, 0.2);
-        box-shadow: 0 0 0 4px rgba(0, 123, 255, 0.1);
+        left: 1.5rem;
+        top: 1.6666rem;
+        font-size: 1.25rem;
     }
 
     .step-content h3 {
@@ -130,7 +118,7 @@ const steps = [
 
         .step-number {
             left: 0.75rem;
-            top: 1.25rem;
+            top: 1rem;
         }
 
         .step-content p {
