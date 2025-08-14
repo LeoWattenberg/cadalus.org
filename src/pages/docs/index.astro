@@ -10,11 +10,13 @@ const sortedDocs = docs
     const titleB = b.frontmatter?.title || b.url.split('/').pop()?.replace(/\.(md|astro)$/, '');
     return titleA.localeCompare(titleB);
   });
+
+  const title = "Documents Overview";
 ---
 
-<Layout title="Documentation Overview">
+<Layout title={title}>
   <main>
-    <h1>Documents</h1>
+    <h1>{title}</h1>
     
     <div class="docs-grid">
       {sortedDocs.map((doc) => {
@@ -43,6 +45,9 @@ const sortedDocs = docs
     font-size: 2.5rem;
     font-weight: bold;
     margin-bottom: 2rem;
+    color:#fff;
+    z-index: 2;
+    position:relative;
   }
 
   .docs-grid {
