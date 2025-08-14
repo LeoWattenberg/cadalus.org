@@ -1,0 +1,42 @@
+---
+export type ButtonVariant = 'primary' | 'secondary';
+
+export interface ButtonProps {
+  href: string;
+  variant?: ButtonVariant;
+  text: string;
+}
+
+const { href, variant = 'primary', text } = Astro.props as ButtonProps;
+const buttonClass = variant === 'primary' ? 'primary-btn' : 'secondary-btn';
+---
+
+<a href={href}>
+  <button class={buttonClass}>{text}</button>
+</a>
+
+<style>
+  button {
+    padding: 0.8rem 1.5rem;
+    border-radius: 4px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+  }
+
+  button:hover {
+    transform: translateY(-2px);
+  }
+
+  .primary-btn {
+    background-color: #007bff;
+    color: white;
+    border: 2px solid #007bff;
+  }
+
+  .secondary-btn {
+    background-color: transparent;
+    color: #007bff;
+    border: 2px solid #007bff;
+  }
+</style>

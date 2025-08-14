@@ -1,14 +1,17 @@
 ---
+import ButtonGroup from './ButtonGroup.astro';
+import type { ButtonProps } from './Button.astro';
+
 const joinContent = {
   title: "Join Cadalus",
-  description: "At the moment, Cadalus is still looking for partners to found the company. If you'd like to be one of the co-founders / founding members, please contact me.",
+  description: "At the moment, Cadalus is still looking for the inital partners to found the company. If you'd like to be one of the co-founders / founding members, please contact me.",
   buttons: [
     {
       text: "Contact Us",
       href: "mailto:cadalus@leoxd.dk",
-      class: "primary-btn"
+      variant: "primary"
     }
-  ],
+  ] satisfies ButtonProps[],
   footer: {
     text: "Impressum",
     href: "https://kw.media/impressum/"
@@ -22,13 +25,7 @@ const joinContent = {
     <p class="join-description">
       {joinContent.description}
     </p>
-    <div class="button-group">
-      {joinContent.buttons.map(button => (
-        <a href={button.href}>
-          <button class={button.class}>{button.text}</button>
-        </a>
-      ))}
-    </div>
+    <ButtonGroup buttons={joinContent.buttons} />
     <p class="small">
       <a href={joinContent.footer.href}>{joinContent.footer.text}</a>
     </p>
@@ -38,8 +35,10 @@ const joinContent = {
 <style>
   .join-contact {
     max-width: 800px;
-    margin: 0 auto;
-    padding: 1rem;
+    margin: auto;
+    padding: 2rem 4rem;
+    background-color: #f3f6f9;
+    border-radius: 8px 8px 0 0;
   }
 
   .join-content {
@@ -56,32 +55,9 @@ const joinContent = {
     margin-bottom: 2rem;
   }
 
-  .button-group {
-    display: flex;
-    gap: 1rem;
-    justify-content: center;
-  }
-
-  button {
-    padding: 0.8rem 1.5rem;
-    border-radius: 4px;
-    font-size: 1.1rem;
-    cursor: pointer;
-    transition: transform 0.2s ease;
-  }
-
-  button:hover {
-    transform: translateY(-2px);
-  }
-
-  .primary-btn {
-    background-color: #007bff;
-    color: white;
-    border: 2px solid #007bff;
-  }
-
   .small {
     font-size: smaller;
     margin-top: 2rem;
   }
+</style>
 </style>

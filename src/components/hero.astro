@@ -1,4 +1,7 @@
 ---
+import ButtonGroup from './ButtonGroup.astro';
+import type { ButtonProps } from './Button.astro';
+
 const heroContent = {
   title: "Welcome to Cadalus",
   description: "A European cooperative alternative to architectural CAD and BIM programs",
@@ -6,14 +9,14 @@ const heroContent = {
     {
       text: "Learn more",
       href: "#features",
-      class: "primary-btn"
+      variant: "primary"
     },
     {
       text: "Get involved",
       href: "#roadmap",
-      class: "secondary-btn"
+      variant: "secondary"
     }
-  ]
+  ] satisfies ButtonProps[]
 };
 ---
 
@@ -23,13 +26,7 @@ const heroContent = {
     <p class="hero-description">
       {heroContent.description}
     </p>
-    <div class="button-group">
-      {heroContent.buttons.map(button => (
-        <a href={button.href}>
-          <button class={button.class}>{button.text}</button>
-        </a>
-      ))}
-    </div>
+    <ButtonGroup buttons={heroContent.buttons} />
   </div>
 </section>
 
@@ -65,35 +62,5 @@ const heroContent = {
     font-size: 3rem;
     margin-bottom: 2rem;
     color: white;
-  }
-
-  .button-group {
-    display: flex;
-    gap: 1rem;
-    justify-content: center;
-  }
-
-  button {
-    padding: 0.8rem 1.5rem;
-    border-radius: 4px;
-    font-size: 1.1rem;
-    cursor: pointer;
-    transition: transform 0.2s ease;
-  }
-
-  button:hover {
-    transform: translateY(-2px);
-  }
-
-  .primary-btn {
-    background-color: #007bff;
-    color: white;
-    border: 2px solid #007bff;;
-  }
-
-  .secondary-btn {
-    background-color: transparent;
-    color: #007bff;
-    border: 2px solid #007bff;
   }
 </style>
