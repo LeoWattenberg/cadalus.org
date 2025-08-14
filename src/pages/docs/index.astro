@@ -1,0 +1,36 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+const docs = await Astro.glob('./*.{md,astro}');
+const sortedDocs = docs
+  .filter(doc => doc.url !== '/docs/') // Exclude the current page
+  .sort((a, b) => {
+    // Sort by frontmatter title if available, otherwise use filename
+    const titleA = a.frontmatter?.title || a.url.split('/').pop()?.replace(/\.(md|astro)$/, '');
+    const titleB = b.frontmatter?.title || b.url.split('/').pop()?.replace(/\.(md|astro)$/, '');
+    return titleA.localeCompare(titleB);
+  });
+---
+
+<Layout title="Documentation Overview">
+  <main class="max-w-4xl mx-auto px-4 py-8">
+    <h1 class="text-4xl font-bold mb-8">Documents</h1>
+    
+    <div class="grid gap-4">
+      {sortedDocs.map((doc) => {
+        const title = doc.frontmatter?.title || doc.url.split('/').pop()?.replace(/\.(md|astro)$/, '');
+        const description = doc.frontmatter?.description || '';
+        
+        return (
+          <a 
+            href={doc.url} 
+            class="block p-6 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow"
+          >
+            <h2 class="text-2xl font-semibold mb-2">{title}</h2>
+            {description && <p class="text-gray-600">{description}</p>}
+          </a>
+        );
+      })}
+    </div>
+  </main>
+</Layout>
