@@ -1,4 +1,5 @@
 ---
+layout: ../../layouts/MarkdownLayout.astro
 title: "Articles of Association"
 description: "Legal framework and governing rules of the organization"
 ---

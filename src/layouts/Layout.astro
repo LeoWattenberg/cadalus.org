@@ -1,49 +1,78 @@
+---
+import Navbar from "../components/navbar.astro";
+---
+
 <!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Cadalus</title>
-	</head>
-	<body>
-		<slot />
-	</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Cadalus</title>
+  </head>
+  <body>
+    <Navbar />
+    <div class="content">
+      <slot />
+    </div>
+  </body>
 
-	<style>
-		html,
-		body {
-			margin: 0;
-			width: 100%;
-			height: 100%;
-			font-family: Inter, Roboto, "Helvetica Neue", "Arial Nova",
-				"Nimbus Sans", Arial, sans-serif;
-			background-color: #1c4b82;
-			background-image: 
-				linear-gradient(rgba(255, 255, 255, 0.1) 1px, transparent 1px),
-				linear-gradient(90deg, rgba(255, 255, 255, 0.1) 1px, transparent 1px),
-				linear-gradient(rgba(255, 255, 255, 0.05) 0.5px, transparent 0.5px),
-				linear-gradient(90deg, rgba(255, 255, 255, 0.05) 0.5px, transparent 0.5px);
-			background-size: 50px 50px, 50px 50px, 10px 10px, 10px 10px;
-			background-position: -1px -1px, -1px -1px, -1px -1px, -1px -1px;
-		}
+  <style>
+    html,
+    body {
+      margin: 0;
+      width: 100%;
+      height: 100%;
+      font-family: Inter, Roboto, "Helvetica Neue", "Arial Nova", "Nimbus Sans",
+        Arial, sans-serif;
+      background-color: #1c4b82;
+      background-image: linear-gradient(
+          rgba(255, 255, 255, 0.1) 1px,
+          transparent 1px
+        ),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.1) 1px, transparent 1px),
+        linear-gradient(rgba(255, 255, 255, 0.05) 0.5px, transparent 0.5px),
+        linear-gradient(
+          90deg,
+          rgba(255, 255, 255, 0.05) 0.5px,
+          transparent 0.5px
+        );
+      background-size:
+        50px 50px,
+        50px 50px,
+        10px 10px,
+        10px 10px;
+      background-position:
+        -1px -1px,
+        -1px -1px,
+        -1px -1px,
+        -1px -1px;
+    }
 
-		body::before {
-			content: '';
-			position: fixed;
-			top: 0;
-			left: 0;
-			right: 0;
-			bottom: 0;
-			background: radial-gradient(circle at center, transparent 0%, rgba(28, 75, 130, 0.4) 100%);
-			pointer-events: none;
-			z-index: 0;
-		}
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: radial-gradient(
+        circle at center,
+        transparent 0%,
+        rgba(28, 75, 130, 0.4) 100%
+      );
+      pointer-events: none;
+      z-index: 0;
+    }
 
-		slot {
-			position: relative;
-			z-index: 1;
-		}
-	</style>
+    slot {
+      position: relative;
+      z-index: 1;
+    }
+
+	.content {
+		padding-top:4em;
+	}
+  </style>
 </html>
