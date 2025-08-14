@@ -10,21 +10,21 @@ export interface ButtonProps {
 const { href, variant = 'primary', text } = Astro.props as ButtonProps;
 const buttonClass = variant === 'primary' ? 'primary-btn' : 'secondary-btn';
 ---
-
-<a href={href}>
-  <button class={buttonClass}>{text}</button>
-</a>
+<a href={href} class={buttonClass}>{text}</a>
 
 <style>
-  button {
+  a {
+    display: inline-block;
     padding: 0.8rem 1.5rem;
     border-radius: 4px;
     font-size: 1.1rem;
     cursor: pointer;
     transition: transform 0.2s ease;
+    text-decoration: none;
+    color: inherit;
   }
 
-  button:hover {
+  a:hover {
     transform: translateY(-2px);
   }
 

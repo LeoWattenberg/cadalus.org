@@ -5,15 +5,14 @@ interface Props {
   buttons: ButtonProps[];
 }
 
-const { buttons } = Astro.props;
+const { buttons } = Astro.props as Props;
 import Button from './Button.astro';
 ---
-
 <div class="button-group">
   {buttons.map(button => (
-    <Button 
-      text={button.text} 
-      href={button.href} 
+    <Button
+      text={button.text}
+      href={button.href}
       variant={button.variant}
     />
   ))}
