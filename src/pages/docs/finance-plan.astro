@@ -1,0 +1,75 @@
+---
+// src/pages/index.astro
+import TableComponent from "../../components/Table.astro";
+import Layout from "../../layouts/Layout.astro";
+
+const oneTimeExpenses = {
+  title: "One-time expenses",
+  headers: ["Item", "Cost (€)"],
+  rows: [
+    ["Legal entity setup (SCE base budget)", 30000],
+    ["Notary/registration/court fees", 5000],
+    ["Total", 35000],
+  ],
+};
+
+const recurringExpenses = {
+  title: "Recurring expenses",
+  headers: ["Item", "Cost (€)"],
+  rows: [
+    ["Personnel – Product owner", 45000],
+    ["Tools – Figma", 192],
+    ["Groupware (Email server, etc)", 66],
+    ["cadalus.org domain", 20],
+    ["Total/year", 45278],
+  ],
+};
+
+const recurringIncome = {
+  title: "Recurring income",
+  headers: ["Item", "Amount (€)"],
+  rows: [
+    ["10 Full members @ 500€/month", 55200],
+    ["Total/year", 55200],
+  ],
+};
+
+const summary = {
+  title: "Summary",
+  headers: ["Metric", "Amount (€)"],
+  rows: [
+    ["Total cost (first year)", 80278],
+    ["Total balance (first year)", -25078],
+  ],
+};
+
+const title = "Cadalus Financial Plan - Stage 0";
+const description = "Financial plan for the first stage of Cadalus, including one-time and recurring expenses, and income projections.";
+---
+
+<Layout title={title} description={description}>
+  <main>
+    <h1>{title}</h1>
+
+    <TableComponent {...summary} />
+    <TableComponent {...oneTimeExpenses} />
+    <TableComponent {...recurringExpenses} />
+    <TableComponent {...recurringIncome} />
+  </main>
+</Layout>
+
+<style>
+  main {
+    max-width: 64rem;
+    margin: 4em auto;
+    padding: 2rem 1rem;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position:relative;
+    z-index: 3;
+  }
+
+  h1 {
+    margin-bottom: 1.5rem;
+  }

@@ -1,0 +1,49 @@
+---
+
+export interface Props {
+  title: string;
+  headers: string[];
+  rows: (string | number)[][];
+}
+
+const { title, headers, rows } = Astro.props;
+---
+
+<div class="table-container">
+  <h2>{title}</h2>
+  <table>
+    <thead>
+      <tr>
+        {headers.map(h => <th>{h}</th>)}
+      </tr>
+    </thead>
+    <tbody>
+      {rows.map(r => (
+        <tr>
+          {r.map(c => <td>{c}</td>)}
+        </tr>
+      ))}
+    </tbody>
+  </table>
+</div>
+
+<style>
+  .table-container {
+    margin: 2rem 0;
+  }
+  h2 {
+    margin-bottom: 0.5rem;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  th, td {
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    text-align: left;
+  }
+  th {
+    background: #f5f5f5;
+  }
+</style>
