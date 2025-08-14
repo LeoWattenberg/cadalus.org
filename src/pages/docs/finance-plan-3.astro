@@ -1,0 +1,87 @@
+---
+import TableComponent from "../../components/Table.astro";
+import Layout from "../../layouts/Layout.astro";
+
+const oneTimeExpenses = {
+  title: "One-time expenses",
+  headers: ["Item", "Cost (€)"],
+  rows: [],
+};
+
+const recurringExpenses = {
+  title: "Recurring expenses",
+  headers: ["Item", "Cost (€)"],
+  rows: [
+    ["Personnel – Product owner", 78000],
+    ["Designer", 60000],
+    ["Developer lead", 78000],
+    ["Developer (3D/math/backend)", 60000],
+    ["Developer (frontend/integrations)", 60000],
+    ["Community manager", 60000],
+    ["Developer (BIM)", 60000],
+    ["Designer", 60000],
+    ["Data entry specialist", 60000],
+    ["Director", 78000],
+    ["QA lead", 78000],
+    ["QA engineer", 60000],
+    ["QA tester", 60000],
+    ["cadalus.org domain", 20],
+    ["Figma", 816],
+    ["Groupware (Email server)", 858],
+    ["Total/year", 853694],
+  ],
+};
+
+const recurringIncome = {
+  title: "Recurring income",
+  headers: ["Item", "Amount (€)"],
+  rows: [
+    ["150 Full members @ 500€/month", 276000],
+    ["500 supporting members @ 50€/m", 90000],
+    ["5 Sponsoring members @ 10000€/month", 600000],
+    ["Total/year", 966000],
+  ],
+};
+
+const summary = {
+  title: "Summary",
+  headers: ["Metric", "Amount (€)"],
+  rows: [
+    ["Total cost (first year)", 853694],
+    ["Total balance (first year)", 112306],
+  ],
+};
+
+export const frontmatter = {
+  title: "Cadalus Financial Plan - Stage 3-4",
+  description: "This configuration allows for a more rapid development towards a BIM. The jobs are now much more specialized (eg, the product owner would no longer routinely act as QA and community manager)",
+};
+---
+
+<Layout title={frontmatter.title} description={frontmatter.description}>
+  <main>
+    <h1>{frontmatter.title}</h1>
+
+    <TableComponent {...summary} />
+    <TableComponent {...oneTimeExpenses} />
+    <TableComponent {...recurringExpenses} />
+    <TableComponent {...recurringIncome} />
+  </main>
+</Layout>
+
+<style>
+  main {
+    max-width: 64rem;
+    margin: 4em auto;
+    padding: 2rem 1rem;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 3;
+  }
+
+  h1 {
+    margin-bottom: 1.5rem;
+  }
+</style>
