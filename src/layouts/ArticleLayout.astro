@@ -1,0 +1,45 @@
+---
+import Layout from "./Layout.astro";
+export interface Props {
+  title?: string;
+  description?: string;
+}
+
+const { title, description } = Astro.props;
+---
+
+<Layout title={title} description={description}>
+  <article class="article">
+    <slot />
+  </article>
+</Layout>
+
+<style>
+  .article {
+    max-width: 800px;
+    margin: 2em auto;
+    padding: 2rem;
+    line-height: 1.6;
+    font-size: 1rem;
+    color: #000;
+    background-color:#f0f0f0;
+    position:relative;
+    z-index: 2;
+    border-radius : 8px;
+  }
+
+  /* Optional: improve heading spacing */
+  .article h1,
+  .article h2,
+  .article h3,
+  .article h4,
+  .article h5,
+  .article h6 {
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .article p {
+    margin-bottom: 1rem;
+  }
+</style>
