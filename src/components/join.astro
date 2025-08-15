@@ -1,21 +1,19 @@
 ---
 import ButtonGroup from './ButtonGroup.astro';
 import type { ButtonProps } from './Button.astro';
+import { t } from '../i18n/config';
+import { getLocaleFromContext } from '../i18n/astro';
+const locale = getLocaleFromContext(Astro);
 
 const joinContent = {
-  title: "Join Cadalus",
-  description: "At the moment, Cadalus is still looking for the inital partners to found the company. If you'd like to be one of the co-founders / founding members, please contact me.",
+  title: t(locale,'title','join'),
+  description: t(locale,'description','join'),
   buttons: [
-    {
-      text: "Contact Us",
-      href: "mailto:cadalus@leoxd.dk",
-      variant: "primary"
-    }
+    { text: t(locale,'buttonContact','join'), href: 'mailto:cadalus@leoxd.dk', variant: 'primary' }
   ] satisfies ButtonProps[],
-  footer: {
-    text: "Impressum",
-    href: "https://kw.media/impressum/"
-  }
+  footer: { text: t(locale,'impressum','join'), href: 'https://kw.media/impressum/' },
+  p1: t(locale,'p1','join'),
+  p2: t(locale,'p2','join')
 };
 ---
 
@@ -26,24 +24,11 @@ const joinContent = {
       {joinContent.description}
     </p>
     <ButtonGroup buttons={joinContent.buttons} />
-    <p class="small">
-      <p>
-          The Cadalus project has been initiated by <a
-            href="https://leo.wattenberg.dk">Leo Wattenberg</a
-          >, who previously worked on the <a href="https://audacityteam.org"
-            >Audacity</a
-          > audio editor for 4 years. The task of his there was similar to what he
-          envisions for Cadalus: creating a free and open source alternative to proprietary
-          software which is easy to use, reliable and eventually to surpass proprietary
-          software in terms of features and user experience.
-        </p>
-        <p>
-          If created, Cadalus would likely be licensed <a
-            href="https://www.gnu.org/licenses/gpl-3.0.en.html">GPLv3</a
-          >.
-        </p>
+    <div class="small">
+      <p set:html={joinContent.p1} />
+      <p set:html={joinContent.p2} />
       <a href={joinContent.footer.href}>{joinContent.footer.text}</a>
-    </p>
+    </div>
   </div>
 </section>
 

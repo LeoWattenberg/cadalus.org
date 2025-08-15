@@ -1,21 +1,16 @@
 ---
 import ButtonGroup from './ButtonGroup.astro';
 import type { ButtonProps } from './Button.astro';
+import { t } from '../i18n/config';
+import { getLocaleFromContext, localePath } from '../i18n/astro';
+const locale = getLocaleFromContext(Astro);
 
 const heroContent = {
-  title: "Welcome to Cadalus",
-  description: "A European cooperative alternative to architectural CAD and BIM programs",
+  title: t(locale,'title','hero'),
+  description: t(locale,'description','hero'),
   buttons: [
-    {
-      text: "Join now",
-      href: "#join",
-      variant: "primary"
-    },
-    {
-      text: "Documents",
-      href: "/docs",
-      variant: "secondary"
-    }
+    { text: t(locale,'buttonJoin','hero'), href: '#join', variant: 'primary' },
+    { text: t(locale,'buttonDocs','hero'), href: localePath(locale,'/docs'), variant: 'secondary' }
   ] satisfies ButtonProps[]
 };
 ---

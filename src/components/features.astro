@@ -4,7 +4,7 @@ import { t as translate } from '../i18n/config';
 import { getLocaleFromContext } from '../i18n/astro';
 
 const locale = getLocaleFromContext(Astro);
-const t = (key: string) => translate(locale, key);
+const t = (key: string) => translate(locale, key, 'features');
 
 const features = [
   {

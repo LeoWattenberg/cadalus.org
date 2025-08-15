@@ -1,0 +1,29 @@
+{
+  "title": "Feuille de route",
+  "steps": [
+    {
+      "title": "Travaux préliminaires",
+      "description": "Avant que tout développement ne puisse commencer, de nombreux travaux préliminaires doivent être effectués : recherche, entretiens avec des architectes, ingénieurs et constructeurs, planification approfondie, incorporation et financement. Cette étape est déjà en cours et produit des documents tels qu'un plan financier, des analyses SWOT et un projet de statuts."
+    },
+    {
+      "title": "Croquis rapides et plans d'étage",
+      "description": "Pouvoir générer rapidement des croquis et des plans est la fonctionnalité centrale. Les plans doivent être faciles et rapides à créer, avec une mise en page intelligente produisant un document de haute qualité utilisable sans ajustements supplémentaires et interopérable avec les logiciels existants. Cette étape nécessiterait deux personnes."
+    },
+    {
+      "title": "Croquis vers géométrie 3D",
+      "description": "Les croquis contiennent toutes les mesures nécessaires pour construire un environnement 3D. Ce processus devrait se produire automatiquement (en arrière-plan) pour vérifier rapidement la réalité tridimensionnelle et détecter les impossibilités. Une équipe complète est requise : PO, designer, 3 développeurs et QA."
+    },
+    {
+      "title": "Géométrie vers visualisations",
+      "description": "Une fois la géométrie 3D existante, Blender peut prendre le relais pour les matériaux PBR, l'éclairage, l'animation et le rendu. Cadalus fournirait un moyen d'intégration avec Blender pour créer des visualisations de haute qualité. L'équipe de 6 personnes suffirait, mais une équipe élargie jusqu'à 15 personnes pourrait être pertinente selon le financement."
+    },
+    {
+      "title": "Un BIM complet",
+      "description": "Passer de la CAO au BIM est un processus plus long, mais reste un problème de saisie de données et de fonctionnalités basées sur ces données. Les priorités appartiendront à la communauté AEC. La taille de l'équipe croîtra selon les besoins mais restera plus légère que sur des bases de code anciennes et lourdes."
+    },
+    {
+      "title": "Développement continu",
+      "description": "Une fois les étapes initiales terminées, le projet entre dans une phase d'entretien : nouveaux cas d'usage, corrections de bugs, compatibilité matérielle/logicielle, et maintien de l'utilité pour la communauté AEC."
+    }
+  ]
+}
