@@ -1,7 +1,9 @@
 ---
 import RootPage from '../index.astro';
-import { parseLocaleFromPath } from '../../i18n/astro';
-const locale = parseLocaleFromPath(Astro.url.pathname);
-// Optionally could validate locale here.
+import { supportedLocales } from '../../i18n/config';
+
+export function getStaticPaths() {
+	return supportedLocales.map((lang) => ({ params: { lang } }));
+}
 ---
 <RootPage />
