@@ -13,6 +13,7 @@ function buildPathForLocale(target: Locale) {
   }
   const rest = '/' + segments.join('/');
   const normalized = rest === '/' ? '/' : rest;
+  if (normalized.startsWith('/docs')) return normalized; // docs stay unlocalized
   return target === defaultLocale ? normalized : `/${target}${normalized}`;
 }
 ---
@@ -76,10 +77,12 @@ function buildPathForLocale(target: Locale) {
   <div class="nav-links">
   <a href={localePath(locale,'/docs/')}>{t(locale,'docs','navbar')}</a>
   <a href={localePath(locale,'/#join')}>{t(locale,'join','navbar')}</a>
-  <div class="lang-switch" role="group" aria-label="Language selector">
-    {supportedLocales.map(l => (
-      <a href={buildPathForLocale(l)} aria-current={l===locale ? 'true':'false'} lang={l}>{l.toUpperCase()}</a>
-    ))}
-  </div>
+  {!pathname.startsWith('/docs') && (
+    <div class="lang-switch" role="group" aria-label="Language selector">
+      {supportedLocales.map(l => (
+        <a href={buildPathForLocale(l)} aria-current={l===locale ? 'true':'false'} lang={l}>{l.toUpperCase()}</a>
+      ))}
+    </div>
+  )}
   </div>
 </nav>

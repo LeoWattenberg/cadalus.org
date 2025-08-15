@@ -17,6 +17,8 @@ export const i18nMiddleware: MiddlewareHandler = async (ctx, next) => {
 
 export function localePath(locale: Locale, path: string) {
   if (!path.startsWith('/')) path = '/' + path;
+  // Don't localize docs paths (shared language-neutral docs section)
+  if (path.startsWith('/docs')) return path;
   if (locale === defaultLocale) return path; // optional: omit default
   return `/${locale}${path}`;
 }
