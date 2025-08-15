@@ -1,36 +1,37 @@
 ---
 import { mdiAccountGroup, mdiBrain, mdiOpenInApp , mdiUltraHighDefinition, mdiCodeTags, mdiStarFace } from '@mdi/js';
-import { t } from 'astro-i18next';
+import { Trans } from 'astro-i18next/components';
+Astro.locals.i18next.changeLanguage("en");
 
 const features = [
   {
-    title: t('ownedByYou'),
-    description: t('ownedByYouDesc'),
+    title: 'ownedByYou',
+    description: 'ownedByYouDesc',
     icon: mdiAccountGroup,
   },
   {
-    title: t('easyToWrap'),
-    description: t('easyToWrapDesc'),
+    title: 'easyToWrap',
+    description: 'easyToWrapDesc',
     icon: mdiBrain,
   },
   {
-    title: t('highestQuality'),
-    description: t('highestQualityDesc'),
+    title: 'highestQuality',
+    description: 'highestQualityDesc',
     icon: mdiUltraHighDefinition,
   },
   {
-    title: t('compatible'),
-    description: t('compatibleDesc'),
+    title: 'compatible',
+    description: 'compatibleDesc',
     icon: mdiOpenInApp,
   },
   {
-    title: t('openSource'),
-    description: t('openSourceDesc'),
+    title: 'openSource',
+    description: 'openSourceDesc',
     icon: mdiCodeTags,
   },
   {
-    title: t('proudlyEuropean'),
-    description: t('proudlyEuropeanDesc'),
+    title: 'proudlyEuropean',
+    description: 'proudlyEuropeanDesc',
     icon: mdiStarFace,
   },
 ];
@@ -51,8 +52,8 @@ const features = [
             feature.icon
           } />
         </svg>
-        <h3 class="feature-title">{feature.title}</h3>
-        <p class="feature-description">{feature.description}</p>
+        <h3 class="feature-title"><Trans i18nKey={feature.title} /></h3>
+        <p class="feature-description"><Trans i18nKey={feature.description} /></p>
       </div>
     ))
   }

@@ -1,8 +1,6 @@
-// @ts-check
-import { defineConfig } from 'astro/config';
-import i18next from './src/i18n.ts';
+import { defineConfig } from "astro/config";
+import astroI18next from "astro-i18next";
 
-// https://astro.build/config
 export default defineConfig({
-  integrations: [i18next],
+  integrations: [astroI18next()],
 });
