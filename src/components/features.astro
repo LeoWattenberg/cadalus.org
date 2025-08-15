@@ -1,7 +1,10 @@
 ---
 import { mdiAccountGroup, mdiBrain, mdiOpenInApp , mdiUltraHighDefinition, mdiCodeTags, mdiStarFace } from '@mdi/js';
-import { Trans } from 'astro-i18next/components';
-Astro.locals.i18next.changeLanguage("en");
+import { t as translate } from '../i18n/config';
+import { getLocaleFromContext } from '../i18n/astro';
+
+const locale = getLocaleFromContext(Astro);
+const t = (key: string) => translate(locale, key);
 
 const features = [
   {
@@ -52,8 +55,8 @@ const features = [
             feature.icon
           } />
         </svg>
-        <h3 class="feature-title"><Trans i18nKey={feature.title} /></h3>
-        <p class="feature-description"><Trans i18nKey={feature.description} /></p>
+        <h3 class="feature-title">{t(feature.title)}</h3>
+        <p class="feature-description">{t(feature.description)}</p>
       </div>
     ))
   }

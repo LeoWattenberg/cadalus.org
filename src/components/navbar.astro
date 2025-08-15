@@ -1,5 +1,8 @@
 ---
-import { mdiDomain } from "@mdi/js"
+import { mdiDomain } from "@mdi/js";
+import { getLocaleFromContext } from "../i18n/astro";
+import { localePath } from "../i18n/astro";
+const locale = getLocaleFromContext(Astro);
 ---
 
 <style>
@@ -39,9 +42,9 @@ import { mdiDomain } from "@mdi/js"
 </style>
 
 <nav>
-  <a href="/" id="logo"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="currentColor"><path d={mdiDomain} /></svg></a>
+  <a href={localePath(locale,'/')} id="logo"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="currentColor"><path d={mdiDomain} /></svg></a>
   <div class="nav-links">
-    <a href="/docs/">Docs</a>
-    <a href="/#join">Join</a>
+  <a href={localePath(locale,'/docs/')}>Docs</a>
+  <a href={localePath(locale,'/#join')}>Join</a>
   </div>
 </nav>
