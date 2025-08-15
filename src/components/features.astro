@@ -1,40 +1,42 @@
 ---
+import '@mdi/font/css/materialdesignicons.min.css';
+
 const features = [
   {
     title: "Owned by you & democratic",
     description:
       "As a european co-op, you don't just buy a license of Cadalus, you partially own it. This means you get a say in how the software is developed and maintained, ensuring it meets your needs and the needs of the community.",
-    image: "/path/to/image1.jpg",
+    icon: "account-group",
   },
   {
     title: "Easy to wrap your head around",
     description:
       "Cadalus will be designed with state-of-the-art UX in mind, alleviating many 'WTF' moments from your daily life.",
-    image: "/path/to/image2.jpg",
+    icon: "brain",
   },
   {
     title: "Highest-quality output",
     description:
       "Cadalus will take great care in keeping your documents as readable and beautiful as possible. It also will be integrated with Blender, allowing for stunningly realistic renders.",
-    image: "/path/to/image3.jpg",
+    icon: "ultra-high-definition",
   },
   {
     title: "Compatible with your existing workflows",
     description:
       "Each stage of Cadalus will be designed to integrate seamlessly with your existing workflows, ensuring a smooth transition and minimal disruption to your projects.",
-    image: "/path/to/image4.jpg",
+    icon: "open-in-app",
   },
   {
     title: "Open source",
     description:
       "Cadalus will be open source, allowing you to make changes to how it works yourself, stick to older versions, or even fork it if you want to go in a different direction.",
-    image: "/path/to/image5.jpg",
+    icon: "code-tags",
   },
   {
     title: "Proudly European",
     description:
       "Cadalus will be entirely EU-based and use European software where applicable. This ensures the highest levels of privacy, avoids strange tariffs, and supports the local economy.",
-    image: "/path/to/image6.jpg",
+    icon: "earth",
   },
 ];
 ---
@@ -43,7 +45,7 @@ const features = [
   {
     features.map((feature) => (
       <div class="feature-card">
-        <img src={feature.image} alt={feature.title} class="feature-image" />
+        <i class={`mdi mdi-${feature.icon}`} style="font-size: 4rem; color: #1a1a1a; margin-bottom: 1rem;"></i>
         <h3 class="feature-title">{feature.title}</h3>
         <p class="feature-description">{feature.description}</p>
       </div>

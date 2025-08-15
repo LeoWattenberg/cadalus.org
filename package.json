@@ -9,6 +9,7 @@
     "astro": "astro"
   },
   "dependencies": {
+    "@mdi/font": "^7.4.47",
     "astro": "^5.12.9"
   }
 }
