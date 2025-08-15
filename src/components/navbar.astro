@@ -10,27 +10,37 @@
     height: 60px;
     background-color: #333;
     color: white;
-    display: flex;
+    display: grid;
+    grid-template-columns: auto 1fr;
     align-items: center;
-    justify-content: right;
     padding: 0 20px;
     z-index: 1000;
   }
   nav a {
     color: white;
     text-decoration: none;
-    margin-right: 15px;
+    margin-left: 15px;
     font-family: Arial, sans-serif;
     font-size: 16px;
   }
   nav a:hover {
     text-decoration: underline;
   }
+
+  #logo {
+    justify-self: start;
+  }
+  .nav-links {
+    justify-self: end;
+    display: flex;
+    align-items: center;
+  }
 </style>
 
 <nav>
-  <a href="/">Home</a>
-  <a href="/docs/">Docs</a>
-  <a href="/about/">About</a>
-  <a href="/contact/">Contact</a>
+  <a href="/" id="logo">Home</a>
+  <div class="nav-links">
+    <a href="/docs/">Docs</a>
+    <a href="/#join">Join</a>
+  </div>
 </nav>
