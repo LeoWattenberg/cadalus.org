@@ -11,6 +11,10 @@
   "dependencies": {
     "@mdi/font": "^7.4.47",
     "@mdi/js": "^7.4.47",
-    "astro": "^5.12.9"
+    "astro": "^5.12.9",
+    "astro-i18next": "^1.0.0-beta.21",
+    "i18next": "^25.3.6",
+    "i18next-browser-languagedetector": "^8.2.0",
+    "i18next-http-backend": "^3.0.2"
   }
 }
