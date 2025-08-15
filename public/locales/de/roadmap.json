@@ -1,0 +1,11 @@
+{
+  "title": "Roadmap",
+  "steps": [
+    { "title": "Vorarbeiten", "description": "Bevor Entwicklung beginnen kann, sind umfangreiche Vorarbeiten nötig: Recherche, Interviews mit Architekt*innen, Ingenieur*innen und Ausführenden, Planung, Gründung und Finanzierung. Diese Phase läuft bereits und liefert u.a. Finanzplan, SWOT-Analysen und einen Satzungsentwurf." },
+    { "title": "Schnelle Skizzen & Grundrisse", "description": "Schnell Skizzen und Grundrisse erzeugen zu können, ist Kernfunktion. Pläne sollen leicht und zügig entstehen; das Programm layoutet intelligent für eine hochwertige Ausgabe, die direkt nutzbar ist und interoperabel mit bestehender Software. Zwei Personen genügen für diese Phase." },
+    { "title": "Von Skizze zu 3D-Geometrie", "description": "Skizzen enthalten alle Maße für ein 3D-Modell. Die Erzeugung sollte automatisch im Hintergrund erfolgen, um Unmöglichkeiten früh zu erkennen. Hierfür braucht es ein Team: Product Owner, Designer*in, 3 Entwickler*innen und QA." },
+    { "title": "Geometrie zu Visualisierungen", "description": "Mit vorhandener 3D-Geometrie übernimmt Blender für Materialien, Licht, Animation & Rendering. Cadalus integriert sich, um hochwertige Visualisierungen zu liefern. Das 6er-Team reicht; bei Parallelisierung evtl. Ausbau auf bis zu 15 Personen." },
+    { "title": "Vollwertiges BIM", "description": "Der Weg von CAD zu BIM ist länger, aber vor allem Frage von Daten & darauf basierenden Funktionen. Prioritäten legt die AEC-Community fest. Teamgröße wächst bedarfsgerecht und bleibt dennoch vergleichsweise schlank." },
+    { "title": "Kontinuierliche Entwicklung", "description": "Nach den Anfangsphasen folgt der Betrieb: neue Anwendungsfälle, Bugfixes, Kompatibilität, und Sicherstellung des Nutzens für die Community." }
+  ]
+}
