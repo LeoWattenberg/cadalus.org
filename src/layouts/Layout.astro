@@ -1,9 +1,5 @@
 ---
 import Navbar from "../components/navbar.astro";
-import { I18nextProvider } from 'astro-i18next';
-import { getI18n } from 'astro-i18next';
-
-const i18n = getI18n();
 
 export interface Props {
   title?: string;
@@ -24,12 +20,10 @@ const { title, description } = Astro.props;
     <title>{title}</title>
   </head>
   <body>
-    <I18nextProvider i18n={i18n}>
-      <Navbar />
-      <div class="content">
-        <slot />
-      </div>
-    </I18nextProvider>
+    <Navbar />
+    <div class="content">
+      <slot />
+    </div>
   </body>
 
   <style>
