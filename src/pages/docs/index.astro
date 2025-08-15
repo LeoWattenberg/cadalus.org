@@ -1,5 +1,6 @@
 ---
 import Layout from '../../layouts/Layout.astro';
+import WarningBox from '../../components/WarningBox.astro';
 
 interface AstroInstance {
   url: string;
@@ -36,7 +37,10 @@ const description = 'Browse our collection of documents and resources.';
 <Layout title={title} description={description}>
   <main>
     <h1>{title}</h1>
-
+    <WarningBox
+      message="All documents here are non-final. They may change in accordance with the wishes of the members."
+      type="info"
+    />
     <div class="docs-grid">
       {sortedDocs.map((doc) => {
         const title = doc.frontmatter?.title || doc.url.split('/').pop()?.replace(/\.(md|astro)$/, '');
