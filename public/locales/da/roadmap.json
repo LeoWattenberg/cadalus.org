@@ -1,29 +1,29 @@
 {
-  "title": "Roadmap",
+  "title": "Tidsplan",
   "steps": [
     {
-      "title": "Preliminary work",
-      "description": "Before any development can start, a lot of preliminary work needs to be done. This includes research into the problem space, interviews with architects, engineers and builders, and extensive planning. It also includes incorporation, and sorting of financing. This stage is already underway and is yielding documents like a finance plan for this and the following stages, SWOT analyses, and a draft for the articles of association. This work is currently being done by Leo Wattenberg, the initiator of the project."
+      "title": "Forberedende arbejde",
+      "description": "Før nogen udvikling kan begynde, skal en række forberedende opgaver udføres: undersøgelser af problemfeltet, interviews med arkitekter, ingeniører og bygherrer, samt grundig planlægning. Det inkluderer også stiftelse og finansiering. Denne fase er allerede i gang og udmønter sig i dokumenter som finansplaner, SWOT-analyser og et udkast til vedtægter. Arbejdet udføres i øjeblikket af initiativtageren Leo Wattenberg."
     },
     {
-      "title": "Quick sketches and floorplans",
-      "description": "Being able to quickly generate sketches and floorplans is the core feature. Plans should be easy and fast to create, with the program intelligently layouting the document to create a high-quality output which can be used by builders without further tweaking. Additionally, the output of this program should be interoperable with existing software, so that using Cadalus at this stage remains useful in production. This stage would require two people to work on Cadalus."
+      "title": "Hurtige skitser og plantegninger",
+      "description": "Muligheden for hurtigt at generere skitser og plantegninger er kernen. Tegningerne skal være hurtige og nemme at lave, med intelligent layout, så output er klart til brug af bygherrer uden videre tilpasning. Output bør også være interoperabelt med eksisterende software. Denne fase kræver typisk to personer."
     },
     {
-      "title": "Sketch to 3D geometry",
-      "description": "CAD sketches by definition contain all measurements necessary to construct a 3D environment. This process should happen automatically (perhaps: in the background), to create a fast check with a three-dimensional reality and quickly spot impossibilities. Given that this work is now 'real CAD' work, a full team is required here: Product owner, designer, 3x developers and a QA."
+      "title": "Skitse til 3D-geometri",
+      "description": "Skitser indeholder alle de mål, der er nødvendige for at konstruere et 3D-miljø. Denne proces bør ske automatisk (fx i baggrunden) for hurtigt at tjekke overensstemmelse med tredimensionel realitet og opdage umuligheder. Dette arbejde kræver et fuldt team: produktansvarlig, designer, 3 udviklere og QA."
     },
     {
-      "title": "Geometry to visualizations",
-      "description": "Once 3D geometry exists, the European open source program Blender can take over and do PBR materials, lighting, animation and rendering. Blender has been doing massive strides recently, and outperforms many commercial applications already. Cadalus would provide a method to integrate with Blender to create high-quality visualizations of the 3D geometry. The work on Cadalus at this stage would include improving the CAD workflows, and providing meaningful base assets for visualizations. The aforementioned 6-people team would be sufficient to get this stage done, though given the parallelization of some of this work, a larger team of up to 15 people may be appropriate (depending on funding)."
+      "title": "Geometri til visualiseringer",
+      "description": "Når 3D-geometrien er til stede, kan Blender håndtere materialer, lys, animation og rendering. Blender har gjort store fremskridt og kan levere fotorealistiske resultater. Cadalus vil tilbyde integration med Blender for at skabe visualiseringer af høj kvalitet. Arbejdet her fokuserer på CAD-workflows og levering af meningsfulde baseassets."
     },
     {
-      "title": "A fully-fledged BIM",
-      "description": "Going from a CAD to a BIM certainly is a longer process, but ultimately only a problem of data input and features which perform calculations based on that data. That is to say, it's all in the realm of possibility. What features would need to be implemented with what priority would be up to the AEC community. The team size here would grow appropriately with the people, though likely will remain comparatively lean as building new features tends to be easier than maintaining ancient, crusty code found in other CAD software."
+      "title": "Et fuldt BIM-system",
+      "description": "At gå fra CAD til BIM er en længere proces, men handler i sidste ende om datainput og funktioner, der udfører beregninger på baggrund af disse data. Hvilke funktioner der prioriteres, vil afgøres af AEC-fællesskabet. Teamstørrelsen vokser i takt med behovene, men kan forblive forholdsvis lean."
     },
     {
-      "title": "Continuous development",
-      "description": "Once the initial stages are done, the project enters the fairly unexciting stage of just maintaining a good tool. This means supporting additional use cases, fixing bugs, ensuring compatibility with new hardware and software, and ensuring that the software remains usable and useful for the AEC community."
+      "title": "Løbende udvikling",
+      "description": "Når de indledende faser er gennemført, går projektet ind i en fasen med vedligeholdelse: understøttelse af flere brugstilfælde, fejlrettelser, kompatibilitet og sikring af, at softwaren forbliver brugbar for AEC-fællesskabet."
     }
   ]
 }

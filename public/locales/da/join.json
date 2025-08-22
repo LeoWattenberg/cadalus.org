@@ -1,8 +1,8 @@
 {
-  "title": "Join Cadalus",
-  "description": "At the moment, Cadalus is still looking for the inital partners to found the company. If you'd like to be one of the co-founders / founding members, please contact me.",
-  "buttonContact": "Contact Us",
-  "impressum": "Impressum",
-  "p1": "The Cadalus project has been initiated by <a href=\"https://leo.wattenberg.dk\">Leo Wattenberg</a>, who previously worked on the <a href=\"https://audacityteam.org\">Audacity</a> audio editor for 4 years. The task of his there was similar to what he envisions for Cadalus: creating a free and open source alternative to proprietary software which is easy to use, reliable and eventually to surpass proprietary software in terms of features and user experience.",
-  "p2": "If created, Cadalus would likely be licensed <a href=\"https://www.gnu.org/licenses/gpl-3.0.en.html\">GPLv3</a>."
+  "title": "Bliv medlem af Cadalus",
+  "description": "Lige nu søger Cadalus stadig de indledende partnere til at stifte selskabet. Hvis du ønsker at være med som medstifter eller grundlæggende medlem, så kontakt mig.",
+  "buttonContact": "Kontakt os",
+  "impressum": "Oplysninger",
+  "p1": "Cadalus-projektet blev initieret af <a href=\"https://leo.wattenberg.dk\">Leo Wattenberg</a>, som tidligere arbejdede på lydeditoren <a href=\"https://audacityteam.org\">Audacity</a> i 4 år. Hans opgave dér var lignende det, han forestiller sig for Cadalus: at skabe et frit og open source alternativ til proprietær software, som er let at bruge, pålideligt og på sigt kan overgå proprietær software i funktioner og brugeroplevelse.",
+  "p2": "Hvis Cadalus bliver realiseret, vil det sandsynligvis blive licenseret under <a href=\"https://www.gnu.org/licenses/gpl-3.0.en.html\">GPLv3</a>."
 }
