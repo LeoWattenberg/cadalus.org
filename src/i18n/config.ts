@@ -1,21 +1,17 @@
-export const supportedLocales = ['en','fr','de'] as const;
+export const supportedLocales = ['en','da','de'] as const;
 export type Locale = typeof supportedLocales[number];
 export const defaultLocale: Locale = 'en';
 
 // Eagerly import JSON (Vite will bundle + tree-shake)
 import enFeatures from '../../public/locales/en/features.json';
-import frFeatures from '../../public/locales/fr/features.json';
+import daFeatures from '../../public/locales/da/features.json';
 import enHero from '../../public/locales/en/hero.json';
-import frHero from '../../public/locales/fr/hero.json';
 import deHero from '../../public/locales/de/hero.json';
 import enNavbar from '../../public/locales/en/navbar.json';
-import frNavbar from '../../public/locales/fr/navbar.json';
 import deNavbar from '../../public/locales/de/navbar.json';
 import enJoin from '../../public/locales/en/join.json';
-import frJoin from '../../public/locales/fr/join.json';
 import deJoin from '../../public/locales/de/join.json';
 import enRoadmap from '../../public/locales/en/roadmap.json';
-import frRoadmap from '../../public/locales/fr/roadmap.json';
 import deRoadmap from '../../public/locales/de/roadmap.json';
 
 type Namespace = 'features' | 'hero' | 'navbar' | 'join' | 'roadmap';
@@ -32,12 +28,12 @@ const resources: Record<Locale, Resources> = {
     join: enJoin,
     roadmap: enRoadmap,
   },
-  fr: {
-    features: frFeatures,
-    hero: frHero,
-    navbar: frNavbar,
-    join: frJoin,
-    roadmap: frRoadmap,
+  da: {
+    features: daFeatures,
+    hero: (await import('../../public/locales/da/hero.json')).default ?? ({} as any),
+    navbar: (await import('../../public/locales/da/navbar.json')).default ?? ({} as any),
+    join: (await import('../../public/locales/da/join.json')).default ?? ({} as any),
+    roadmap: (await import('../../public/locales/da/roadmap.json')).default ?? ({} as any),
   },
   de: {
     features: (await import('../../public/locales/de/features.json')).default ?? ({} as any),
