@@ -1,0 +1,28 @@
+---
+import { getLocaleFromContext } from "../i18n/astro";
+import { t } from "../i18n/config";
+---
+
+<aside class="site-notice" role="status" aria-live="polite">
+  {t(getLocaleFromContext(Astro), 'message', 'sitenotice')}
+</aside>
+
+<style>
+.site-notice {
+  background: linear-gradient(90deg, #fffbe6, #fff1f0);
+  border-left: 4px solid #f6ad55;
+  color: #222;
+  padding: 0.75rem 1rem;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  line-height: 1.35;
+}
+
+@media (prefers-color-scheme: dark) {
+  .site-notice {
+    background: linear-gradient(90deg, #2a2a2a, #1f1f1f);
+    color: #e6e6e6;
+    border-left-color: #d69e2e;
+  }
+}
+</style>

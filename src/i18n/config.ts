@@ -13,8 +13,9 @@ import enJoin from '../../public/locales/en/join.json';
 import deJoin from '../../public/locales/de/join.json';
 import enRoadmap from '../../public/locales/en/roadmap.json';
 import deRoadmap from '../../public/locales/de/roadmap.json';
+import enSitenotice from '../../public/locales/en/sitenotice.json';
 
-type Namespace = 'features' | 'hero' | 'navbar' | 'join' | 'roadmap';
+type Namespace = 'features' | 'hero' | 'navbar' | 'join' | 'roadmap' | 'sitenotice';
 
 type FlatDict = Record<string,string>;
 // Allow complex objects (roadmap has an array). Use unknown and resolve at access time.
@@ -26,21 +27,24 @@ const resources: Record<Locale, Resources> = {
     hero: enHero,
     navbar: enNavbar,
     join: enJoin,
-    roadmap: enRoadmap,
+  roadmap: enRoadmap,
+  sitenotice: enSitenotice,
   },
   da: {
     features: daFeatures,
     hero: (await import('../../public/locales/da/hero.json')).default ?? ({} as any),
     navbar: (await import('../../public/locales/da/navbar.json')).default ?? ({} as any),
     join: (await import('../../public/locales/da/join.json')).default ?? ({} as any),
-    roadmap: (await import('../../public/locales/da/roadmap.json')).default ?? ({} as any),
+  roadmap: (await import('../../public/locales/da/roadmap.json')).default ?? ({} as any),
+  sitenotice: (await import('../../public/locales/da/sitenotice.json')).default ?? ({} as any),
   },
   de: {
     features: (await import('../../public/locales/de/features.json')).default ?? ({} as any),
     hero: deHero,
     navbar: deNavbar,
     join: deJoin,
-    roadmap: deRoadmap,
+  roadmap: deRoadmap,
+  sitenotice: (await import('../../public/locales/de/sitenotice.json')).default ?? ({} as any),
   },
 };
 
