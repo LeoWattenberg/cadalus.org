@@ -1,0 +1,106 @@
+---
+import { mdiCubeOutline, mdiOfficeBuildingPlusOutline, mdiClipboardCheck } from '@mdi/js';
+import { t as translate } from '../i18n/config';
+import { getLocaleFromContext } from '../i18n/astro';
+
+const locale = getLocaleFromContext(Astro);
+const t = (key: string) => translate(locale, key, 'programs');
+
+const programs = [
+  {
+    title: 'cad',
+    description: 'cadDesc',
+    icon: mdiCubeOutline,
+  },
+  {
+    title: 'bim',
+    description: 'bimDesc',
+    icon: mdiOfficeBuildingPlusOutline,
+  },
+  {
+    title: 'procurement',
+    description: 'procurementDesc',
+    icon: mdiClipboardCheck,
+  },
+];
+---
+
+<div class="programs-grid" id="programs">
+  {
+    programs.map((program) => (
+      <div class="program-card">
+        <svg
+          viewBox="0 0 24 24"
+          width="48"
+          height="48"
+          fill="#1a1a1a"
+          style="margin-bottom: 1rem;"
+        >
+          <path d={program.icon} />
+        </svg>
+        <h3 class="program-title">{t(program.title)}</h3>
+        <p class="program-description">{t(program.description)}</p>
+      </div>
+    ))
+  }
+</div>
+
+<style>
+  .programs-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    padding: 2rem;
+    position: relative;
+  }
+
+  .program-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1.5rem;
+    background-color: rgba(255, 255, 255, 0.95);
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(4px);
+    position: relative;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+  }
+
+  .program-card::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    border-radius: 0.6rem;
+    pointer-events: none;
+  }
+
+  .program-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    color: #1a1a1a;
+  }
+
+  .program-description {
+    color: #444;
+    text-align: center;
+    line-height: 1.5;
+  }
+
+  @media (max-width: 1024px) {
+    .programs-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (max-width: 640px) {
+    .programs-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

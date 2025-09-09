@@ -1,0 +1,8 @@
+{
+  "cad": "CAD",
+  "cadDesc": "Et arkitektonisk CAD-program, designet til at få etagsplaner og bygningstegninger så hurtigt som muligt, inklusive automatiske 3D-modeller baseret på etagsplanerne.",
+  "bim": "BIM",
+  "bimDesc": "Et udvideligt BIM-program, der giver dig mulighed for at modellere og administrere hvert trin.",
+  "procurement": "Indkøbsstyring",
+  "procurementDesc": "Administrer udbud, tildeling og kontraktudførelse."
+}

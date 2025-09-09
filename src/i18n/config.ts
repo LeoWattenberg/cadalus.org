@@ -14,8 +14,9 @@ import deJoin from '../../public/locales/de/join.json';
 import enRoadmap from '../../public/locales/en/roadmap.json';
 import deRoadmap from '../../public/locales/de/roadmap.json';
 import enSitenotice from '../../public/locales/en/sitenotice.json';
+import enPrograms from '../../public/locales/en/programs.json';
 
-type Namespace = 'features' | 'hero' | 'navbar' | 'join' | 'roadmap' | 'sitenotice';
+type Namespace = 'features' | 'hero' | 'navbar' | 'join' | 'roadmap' | 'sitenotice' | 'programs';
 
 type FlatDict = Record<string,string>;
 // Allow complex objects (roadmap has an array). Use unknown and resolve at access time.
@@ -27,24 +28,27 @@ const resources: Record<Locale, Resources> = {
     hero: enHero,
     navbar: enNavbar,
     join: enJoin,
-  roadmap: enRoadmap,
-  sitenotice: enSitenotice,
+    roadmap: enRoadmap,
+    sitenotice: enSitenotice,
+    programs: enPrograms,
   },
   da: {
     features: daFeatures,
     hero: (await import('../../public/locales/da/hero.json')).default ?? ({} as any),
     navbar: (await import('../../public/locales/da/navbar.json')).default ?? ({} as any),
     join: (await import('../../public/locales/da/join.json')).default ?? ({} as any),
-  roadmap: (await import('../../public/locales/da/roadmap.json')).default ?? ({} as any),
-  sitenotice: (await import('../../public/locales/da/sitenotice.json')).default ?? ({} as any),
+    roadmap: (await import('../../public/locales/da/roadmap.json')).default ?? ({} as any),
+    sitenotice: (await import('../../public/locales/da/sitenotice.json')).default ?? ({} as any),
+    programs: (await import('../../public/locales/da/programs.json')).default ?? ({} as any),
   },
   de: {
     features: (await import('../../public/locales/de/features.json')).default ?? ({} as any),
     hero: deHero,
     navbar: deNavbar,
     join: deJoin,
-  roadmap: deRoadmap,
-  sitenotice: (await import('../../public/locales/de/sitenotice.json')).default ?? ({} as any),
+    roadmap: deRoadmap,
+    sitenotice: (await import('../../public/locales/de/sitenotice.json')).default ?? ({} as any),
+    programs: (await import('../../public/locales/de/programs.json')).default ?? ({} as any),
   },
 };
 

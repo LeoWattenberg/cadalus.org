@@ -1,0 +1,8 @@
+{
+  "cad": "CAD",
+  "cadDesc": "Ein architektonisches CAD-Programm, das darauf ausgelegt ist, Grundrisse und Baupläne so schnell wie möglich zu erstellen, einschließlich automatischer 3D-Modelle basierend auf den Grundrissen.",
+  "bim": "BIM",
+  "bimDesc": "Ein erweiterbares BIM-Programm, das es Ihnen ermöglicht, jeden Schritt zu modellieren und zu verwalten.",
+  "procurement": "AVA",
+  "procurementDesc": "Verwalten Sie Ausschreibungen, Vergaben und Vertragsdurchführung."
+}

@@ -1,0 +1,8 @@
+{
+  "cad": "CAD",
+  "cadDesc": "An architectural CAD program, designed to get floorplans and blueprints as quickly as possible, including automatic 3D mockups based on the floorplans.",
+  "bim": "BIM",
+  "bimDesc": "An extensible BIM program letting you model and manage every step.",
+  "procurement": "Procurement management",
+  "procurementDesc": "Manage tendering, awarding and contract execution."
+}
