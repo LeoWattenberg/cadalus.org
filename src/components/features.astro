@@ -40,7 +40,8 @@ const features = [
 ];
 ---
 
-<div class="features-grid" id="features">
+<h2 class="section-title" id="features">{t('featuresTitle')}</h2>
+<div class="features-grid">
   {
     features.map((feature) => (
       <div class="feature-card">
@@ -67,7 +68,7 @@ const features = [
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
-    padding: 2rem;
+    padding: 0 2rem;
     position: relative;
   }
 
