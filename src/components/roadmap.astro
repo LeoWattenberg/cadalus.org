@@ -10,7 +10,7 @@ const roadmapTitle = t(locale,'title','roadmap');
 ---
 
 <div class="roadmap">
-    <h2 class="roadmap-title">{roadmapTitle}</h2>
+    <h2 class="section-title">{roadmapTitle}</h2>
     <div class="roadmap-container">
         {steps.map((step, index) => (
             <div class="roadmap-step">
@@ -28,13 +28,6 @@ const roadmapTitle = t(locale,'title','roadmap');
     .roadmap {
         padding: 2rem;
         margin: 2rem 0;
-    }
-
-    .roadmap-title {
-        color: #ffffff;
-        font-size: 2rem;
-        margin: 0 0 2rem;
-        text-align: center;
     }
 
     .roadmap-container {

@@ -4,5 +4,6 @@
   "bim": "BIM",
   "bimDesc": "An extensible BIM program letting you model and manage every step.",
   "procurement": "Procurement management",
-  "procurementDesc": "Manage tendering, awarding and contract execution."
+  "procurementDesc": "Manage tendering, awarding and contract execution.",
+  "plannedAppsTitle": "Planned Apps"
 }
