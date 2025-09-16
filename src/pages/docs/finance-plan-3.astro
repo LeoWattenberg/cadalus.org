@@ -61,6 +61,7 @@ export const frontmatter = {
 <Layout title={frontmatter.title} description={frontmatter.description}>
   <main>
     <h1>{frontmatter.title}</h1>
+    <p>{frontmatter.description}</p>
 
     <TableComponent {...summary} />
     <TableComponent {...oneTimeExpenses} />
